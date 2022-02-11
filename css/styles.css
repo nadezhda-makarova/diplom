@@ -735,28 +735,26 @@ h1 {
   text-decoration: none;
 }
 
-.overlay {
-  background: #000000;
-  opacity: 0.6;
+.popup {
+  max-width: 390px;
+  width: 100%;
+  background: #ffffff;
+  padding: 50px 25px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.popup_container {
+  background: rgba(0, 0, 0, 0.6);
   position: fixed;
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 8;
-  display: none;
-}
-
-.popup {
-  position: fixed;
-  top: 243px;
-  background: #ffffff;
-  left: 50%;
-  margin-left: -195px;
-  width: 390px;
-  box-sizing: border-box;
-  padding: 50px 25px;
-  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   display: none;
 }
 
@@ -780,7 +778,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-.input {
+.select {
   align-items: center;
   display: flex;
   height: 48px;
@@ -788,18 +786,19 @@ h1 {
   font-size: 13px;
   font-family: "Open Sans";
   border: none;
-  background: #f4f7f6;
+  background-color: #f4f7f6;
   width: 100%;
+  appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  background-image: url("../images/svg/form-arrows.svg");
+  background-size: 10px 17px;
+  background-repeat: no-repeat;
+  background-position: 97% center;
 }
 
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  display: block;
-  width: 10px;
-  opacity: 1;
-  background-image: url('../images/svg/form-arrows.svg');
-  background-position: center;
-  background-size: contain;
+select::-ms-expand {
+  display: none;
 }
 
 .elem-form {
@@ -864,11 +863,11 @@ input::-webkit-inner-spin-button {
 .close {
   position: absolute;
   right: 0;
-  top: -50px;
+  top: -27px;
   background: none;
   border: none;
-  height: 30px;
-  width: 30px;
+  height: 19px;
+  width: 19px;
   cursor: pointer;
   display: block;
   padding: 0;
@@ -915,11 +914,6 @@ input::-webkit-inner-spin-button {
     line-height: 29px;
   }
 
-  .content {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .card {
     margin: 0 0 3px 3px;
     max-width: 384px;
@@ -928,10 +922,6 @@ input::-webkit-inner-spin-button {
 
   .card:first-child {
     margin-left: 0;
-  }
-
-  .card:last-child {
-    margin: 0;
   }
 
   .card .title {
@@ -1010,6 +1000,10 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 1154px) {
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .card:nth-child(3n) {
     margin-left: 0;
   }
@@ -1162,12 +1156,6 @@ input::-webkit-inner-spin-button {
 
   .our-products {
     padding: 0;
-  }
-
-  .popup {
-    max-width: 330px;
-    width: 100%;
-    margin-left: -165px;
   }
 
   @media screen and (orientation: landscape) {
