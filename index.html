@@ -499,39 +499,43 @@
     </div>
   </footer>
 
-  <div class="overlay"></div>
+  <div class="popup_container">
+    <div class="popup">
+      <h2 class="title">Ваш фидбэк</h2>
 
-  <div class="popup">
-    <h2 class="title">Ваш фидбэк</h2>
+      <form class="form" id="feedback">
+        <button class="close">
+          <img src="./images/svg/form-x.svg" alt="Закрыть" />
+        </button>
+        <div class="elem-form">
+          <label class="label" for="count">Как часто вы заходите на сайт?</label>
+          <select class="select">
+            <option value="every" selected>Почти каждый день</option>
+          </select>
+        </div>
+        <div class="elem-form">
+          <label class="label">Вы подписаны на e-mail рассылку?</label>
 
-    <form class="form" id="feedback">
-      <button class="close">
-        <img src="./images/svg/form-x.svg" alt="Закрыть" />
-      </button>
-      <div class="elem-form">
-        <label class="label" for="count">Как часто вы заходите на сайт?</label>
-        <input type="number" class="input" id="count" name="count">
-      </div>
-      <div class="elem-form">
-        <label class="label">Вы подписаны на e-mail рассылку?</label>
-        <label class="radio">
-          <input type="radio" name="subscribe" checked />
-          <span class="radio-elem"></span>
-          <span class="label-text">Да</span>
-        </label>
-        <label class="radio">
-          <input type="radio" name="subscribe" />
-          <span class="radio-elem"></span>
-          <span class="label-text">Нет</span>
-        </label>
-      </div>
-      <div class="elem-form">
-        <label class="label" for="text">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
-        <textarea name="text" resize="none" class="textarea" placeholder="Может, больше рецептов?"></textarea>
-      </div>
+          <label class="radio">
+            <input type="radio" name="subscribe" checked />
+            <span class="radio-elem"></span>
+            <span class="label-text">Да</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="subscribe" />
+            <span class="radio-elem"></span>
+            <span class="label-text">Нет</span>
+          </label>
+        </div>
+        <div class="elem-form">
+          <label class="label" for="text">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+          <textarea name="text" resize="none" class="textarea" placeholder="Может, больше рецептов?"></textarea>
+        </div>
 
-      <input type="submit" class="subscribe-button" value="Отправить" form="feedback" />
-    </form>
+        <input type="submit" class="subscribe-button" value="Отправить" form="feedback" />
+      </form>
+    </div>
+
   </div>
 </body>
 
