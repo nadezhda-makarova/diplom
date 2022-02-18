@@ -935,6 +935,7 @@ select::-ms-expand {
 
   .news-list {
     flex: 0 0 calc(100% - 300px);
+    margin-right: 5px;
   }
 
   .aside {
@@ -1000,6 +1001,14 @@ select::-ms-expand {
 }
 
 @media screen and (max-width: 1154px) {
+  .card {
+    width: calc(100% - 3px);
+    max-width: initial;
+    flex: 0 0 49%;
+  }
+}
+
+@media screen and (max-width: 1154px) {
   .content {
     flex-wrap: wrap;
     justify-content: center;
@@ -1009,6 +1018,20 @@ select::-ms-expand {
   }
   .card:last-child {
     margin-left: 3px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .card {
+    max-width: initial;
+    margin-left: 0;
+    flex: 0 0 100%;
+  }
+  .card:last-child {
+    margin-left: 0;
+  }
+  .card .content-block {
+    width: 100%;
   }
 }
 
@@ -1092,6 +1115,7 @@ select::-ms-expand {
 
   .news-list {
     flex: 1 1 100%;
+    margin-right: 0;
   }
 
   .news-img {
